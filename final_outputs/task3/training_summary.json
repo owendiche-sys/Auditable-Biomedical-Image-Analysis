@@ -1,0 +1,23 @@
+{
+  "best_checkpoint": "/content/outputs/task3/best_model.pt",
+  "best_loss": "combined",
+  "best_validation_metrics": {
+    "loss": null,
+    "mean_dice": 0.9945066273212433,
+    "mean_iou": 0.9890783697366714,
+    "std_dice": 0.001606880374460419,
+    "std_iou": 0.003176434166561282,
+    "n_images": 20,
+    "threshold": 0.7000000000000002
+  },
+  "prediction_panel_image_ids": [
+    "val_005",
+    "val_006",
+    "val_019"
+  ],
+  "relative_method_examples": {
+    "unet_pixel_overlap_best": "val_012",
+    "otsu_object_count_best": "val_000"
+  },
+  "note": "Relative examples are selected by the largest positive and negative Dice difference. Inspect the signed differences before claiming either method absolutely won an image."
+}

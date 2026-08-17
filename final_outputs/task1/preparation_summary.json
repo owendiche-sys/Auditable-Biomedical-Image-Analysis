@@ -1,0 +1,14 @@
+{
+  "n_images": 112,
+  "split_counts": {
+    "test": 12,
+    "train": 80,
+    "val": 20
+  },
+  "image_size": [
+    256,
+    256
+  ],
+  "colour_mode": "grayscale",
+  "representative_image_id": "train_026"
+}

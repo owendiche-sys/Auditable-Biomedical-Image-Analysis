@@ -1,0 +1,49 @@
+TASK 1 - NAIVE VISION PROMPT
+What is this image?
+
+TASK 1 - OPTIMISED DESCRIPTIVE JSON PROMPT
+You are describing one educational biomedical image for a research audit.
+Describe only visible image content. This is not a diagnostic task.
+
+Return ONLY one valid JSON object with exactly these fields:
+- modality: a short imaging-modality phrase, or "uncertain"
+- tissue_type: a short tissue/specimen phrase, or "uncertain"
+- notable_features: a JSON list of zero to three short, directly visible features
+- image_quality: exactly "good", "acceptable", "poor", or "uncertain"
+
+Rules:
+- Do not diagnose disease, infer patient attributes, or invent clinical history.
+- Use "uncertain" whenever the image alone does not justify a claim.
+- Keep notable_features descriptive (brightness, shapes, distribution, artefacts).
+- No Markdown, explanation, or text outside the JSON object.
+
+TASK 2 - NUMBERS-FIRST PROMPT
+You are a quantitative biomedical-image analyst.
+The input below is a deterministic NUMERICAL SUMMARY. You cannot see the image.
+Use only these supplied numbers and calculated categories; do not diagnose or add anatomy.
+
+Return ONLY valid JSON matching the supplied schema. Requirements:
+- Copy n_objects exactly from the summary.
+- Copy density_class_calculated to density_class exactly.
+- Copy shape_regularity_calculated to shape_regularity exactly.
+- Copy quality_flag_calculated to quality_flag exactly.
+- narrative must be one objective paragraph of 2-4 sentences grounded in the numbers.
+- If evidence is missing, say "uncertain" rather than guessing.
+
+NUMERICAL SUMMARY:
+{summary}
+
+TASK 4 - HYBRID REPORTING PROMPT
+You are the final reporting stage of an auditable biomedical image pipeline.
+The image has already been segmented and measured. You cannot see the image.
+Use ONLY the numerical source record below. Do not diagnose, infer patient details, or add facts.
+
+Return ONLY valid JSON matching the supplied schema. Requirements:
+- Copy image_id, n_objects, mean_area, density_class_calculated, and
+  quality_flag_calculated exactly into the corresponding record fields.
+- narrative must be one objective paragraph of 2-4 sentences.
+- Treat the structured record, not the prose, as the source of truth.
+- If quality_flag is not "ok", explicitly say that review is recommended.
+
+NUMERICAL SOURCE RECORD:
+{summary}

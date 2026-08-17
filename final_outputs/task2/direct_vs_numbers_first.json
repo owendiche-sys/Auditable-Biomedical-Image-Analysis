@@ -1,0 +1,22 @@
+{
+  "image_id": "train_026",
+  "direct_vlm": {
+    "modality": "brightfield",
+    "tissue_type": "uncertain",
+    "notable_features": [
+      "bright",
+      "dark spots"
+    ],
+    "image_quality": "good"
+  },
+  "numbers_first": {
+    "record": {
+      "n_objects": 23,
+      "density_class": "moderate",
+      "shape_regularity": "regular",
+      "quality_flag": "ok"
+    },
+    "narrative": "The image has a moderate density, with an average area of 234.17 square pixels and a median area of 179 square pixels. The circularity is relatively high, indicating a roughly circular shape. The quality of the image is considered good, with no notable issues detected."
+  },
+  "audit_observation": "The direct record can describe visible context but its claims originate in model perception; the numbers-first record is narrower but every numerical claim traces to the saved regionprops table."
+}

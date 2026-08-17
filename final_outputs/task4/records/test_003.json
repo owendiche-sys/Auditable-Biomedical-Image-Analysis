@@ -1,0 +1,43 @@
+{
+  "source_summary": {
+    "image_id": "test_003",
+    "image_width_px": 256,
+    "image_height_px": 256,
+    "n_objects": 19,
+    "foreground_fraction": 0.059265,
+    "density_class_calculated": "moderate",
+    "shape_regularity_calculated": "mixed",
+    "quality_flag_calculated": "ok",
+    "intensity_mean": 0.035618,
+    "intensity_std": 0.061886,
+    "contrast_p99_p01": 0.329412,
+    "focus_laplacian_variance": 0.003791,
+    "area_mean": 204.421053,
+    "area_median": 200.0,
+    "area_std": 99.512134,
+    "eccentricity_mean": 0.697185,
+    "eccentricity_median": 0.743285,
+    "eccentricity_std": 0.138263,
+    "solidity_mean": 0.961558,
+    "solidity_median": 0.968889,
+    "solidity_std": 0.033324,
+    "circularity_mean": 0.951246,
+    "circularity_median": 0.96748,
+    "circularity_std": 0.107903,
+    "mean_intensity_mean": 0.259934,
+    "mean_intensity_median": 0.261137,
+    "mean_intensity_std": 0.03777
+  },
+  "accepted_record": {
+    "image_id": "test_003",
+    "n_objects": 19,
+    "mean_area": 204.421053,
+    "density_class": "moderate",
+    "quality_flag": "ok"
+  },
+  "narrative": "The image has been segmented and measured with a moderate density class. The quality of the image is considered ok. Review is not recommended at this time.",
+  "llm_model": "llama3.2",
+  "llm_raw_response": "{\n  \"record\": {\n    \"image_id\": \"test_003\",\n    \"n_objects\": 19,\n    \"mean_area\": 204.421053,\n    \"density_class\": \"moderate\",\n    \"quality_flag\": \"ok\"\n  },\n  \"narrative\": \"The image has been segmented and measured with a moderate density class. The quality of the image is considered ok. Review is not recommended at this time.\"\n}",
+  "llm_valid": true,
+  "validation_errors": []
+}

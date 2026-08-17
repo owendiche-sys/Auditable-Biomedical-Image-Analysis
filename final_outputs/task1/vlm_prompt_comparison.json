@@ -1,0 +1,56 @@
+{
+  "image_id": "train_026",
+  "image_path": "/content/outputs/preprocessed/train/images/train_026.png",
+  "vision_model": "llama3.2-vision",
+  "temperature": 0.4,
+  "naive_prompt": "What is this image?",
+  "naive_response": "The image appears to be a microscopic view of cells, likely from a biological or medical context. The image shows a cluster of cells with varying sizes and shapes, some of which have a distinct nucleus. The cells are likely stained with a specific dye or marker to highlight their structure and features. The image may be used in scientific research, education, or medical diagnosis to study cell biology, identify cell types, or monitor cell behavior.",
+  "optimised_prompt": "You are describing one educational biomedical image for a research audit.\nDescribe only visible image content. This is not a diagnostic task.\n\nReturn ONLY one valid JSON object with exactly these fields:\n- modality: a short imaging-modality phrase, or \"uncertain\"\n- tissue_type: a short tissue/specimen phrase, or \"uncertain\"\n- notable_features: a JSON list of zero to three short, directly visible features\n- image_quality: exactly \"good\", \"acceptable\", \"poor\", or \"uncertain\"\n\nRules:\n- Do not diagnose disease, infer patient attributes, or invent clinical history.\n- Use \"uncertain\" whenever the image alone does not justify a claim.\n- Keep notable_features descriptive (brightness, shapes, distribution, artefacts).\n- No Markdown, explanation, or text outside the JSON object.",
+  "optimised_runs": [
+    {
+      "run": 1,
+      "raw_response": "{ \"modality\": \"brightfield\", \"tissue_type\": \"uncertain\", \"notable_features\": [\"bright\", \"dark spots\"], \"image_quality\": \"good\" }",
+      "parsed": {
+        "modality": "brightfield",
+        "tissue_type": "uncertain",
+        "notable_features": [
+          "bright",
+          "dark spots"
+        ],
+        "image_quality": "good"
+      },
+      "validation_errors": []
+    },
+    {
+      "run": 2,
+      "raw_response": "{ \"modality\": \"brightfield\", \"tissue_type\": \"uncertain\", \"notable_features\": [\"bright\", \"round\", \"clustered\"], \"image_quality\": \"good\" }",
+      "parsed": {
+        "modality": "brightfield",
+        "tissue_type": "uncertain",
+        "notable_features": [
+          "bright",
+          "round",
+          "clustered"
+        ],
+        "image_quality": "good"
+      },
+      "validation_errors": []
+    },
+    {
+      "run": 3,
+      "raw_response": "{ \"modality\": \"brightfield\", \"tissue_type\": \"uncertain\", \"notable_features\": [\"bright spots\"], \"image_quality\": \"good\" }",
+      "parsed": {
+        "modality": "brightfield",
+        "tissue_type": "uncertain",
+        "notable_features": [
+          "bright spots"
+        ],
+        "image_quality": "good"
+      },
+      "validation_errors": []
+    }
+  ],
+  "n_unique_optimised_records": 3,
+  "all_optimised_runs_identical": false,
+  "variability_note": "At least two structured records differed across repeated stochastic calls."
+}

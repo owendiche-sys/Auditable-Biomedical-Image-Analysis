@@ -1,0 +1,43 @@
+{
+  "source_summary": {
+    "image_id": "test_000",
+    "image_width_px": 256,
+    "image_height_px": 256,
+    "n_objects": 8,
+    "foreground_fraction": 0.023407,
+    "density_class_calculated": "sparse",
+    "shape_regularity_calculated": "regular",
+    "quality_flag_calculated": "ok",
+    "intensity_mean": 0.017928,
+    "intensity_std": 0.035792,
+    "contrast_p99_p01": 0.231373,
+    "focus_laplacian_variance": 0.002978,
+    "area_mean": 191.75,
+    "area_median": 178.5,
+    "area_std": 104.091006,
+    "eccentricity_mean": 0.635926,
+    "eccentricity_median": 0.695129,
+    "eccentricity_std": 0.194784,
+    "solidity_mean": 0.968293,
+    "solidity_median": 0.970329,
+    "solidity_std": 0.015656,
+    "circularity_mean": 0.983611,
+    "circularity_median": 0.994351,
+    "circularity_std": 0.060515,
+    "mean_intensity_mean": 0.231985,
+    "mean_intensity_median": 0.236596,
+    "mean_intensity_std": 0.028976
+  },
+  "accepted_record": {
+    "image_id": "test_000",
+    "n_objects": 8,
+    "mean_area": 191.75,
+    "density_class": "sparse",
+    "quality_flag": "ok"
+  },
+  "narrative": "The image has been segmented and measured with a mean area of 191.75 pixels. The object count is 8, indicating multiple objects in the image. Review is recommended for quality flag calculated as \"ok\".",
+  "llm_model": "llama3.2",
+  "llm_raw_response": "{\n  \"record\": {\n    \"image_id\": \"test_000\",\n    \"n_objects\": 8,\n    \"mean_area\": 191.75,\n    \"density_class\": \"sparse\",\n    \"quality_flag\": \"ok\"\n  },\n  \"narrative\": \"The image has been segmented and measured with a mean area of 191.75 pixels. The object count is 8, indicating multiple objects in the image. Review is recommended for quality flag calculated as \\\"ok\\\".\"\n}",
+  "llm_valid": true,
+  "validation_errors": []
+}
